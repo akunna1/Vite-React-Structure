@@ -1,6 +1,6 @@
 # Vite-React-Structure for new portfolio website.
 
-- Public folder: used for static assets e.g images, etc. that don't need processing by the build tool. Files in this folder are directly accessible and won't be processed by Vite. One can call images in .jsx files without having to import it as a component e.g  <img src="/ats_website/raleigh.jpg" alt="Me" className="object-cover w-full h-full" /> if they are stored there.
+- Public folder: used for static assets e.g images, etc. that don't need processing by the build tool. Files in this folder are directly accessible and won't be processed by Vite. One can call images in .jsx files without having to import it as a component e.g  "<img src="/ats_website/raleigh.jpg" alt="Me" className="object-cover w-full h-full" " /> if they are stored there.
   
 - Src folder: where the application's source code resides. It includes all the JavaScript/JSX, CSS, and other files that need to be processed and bundled by Vite.
   
