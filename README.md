@@ -1,4 +1,4 @@
-# Vite-React-Structure for new portfolio website.
+# Vite-React-Structure used for my new portfolio website project
 
 - Public folder: used for static assets e.g images, etc. that don't need processing by the build tool. Files in this folder are directly accessible and won't be processed by Vite. One can call images in .jsx files without having to import it as a component e.g  "<img src="/ats_website/raleigh.jpg" alt="Me" className="object-cover w-full h-full" " /> if they are stored there.
   
