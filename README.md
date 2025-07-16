@@ -1,23 +1,82 @@
-# Vite-React-Structure used for my new portfolio website project
+# ⚛️ Vite-React-Structure
 
-- Public folder: used for static assets e.g images, etc. that don't need processing by the build tool. Files in this folder are directly accessible and won't be processed by Vite. One can call images in .jsx files without having to import it as a component e.g  "<img src="/ats_website/raleigh.jpg" alt="Me" className="object-cover w-full h-full" " /> if they are stored there.
-  
-- Src folder: where the application's source code resides. It includes all the JavaScript/JSX, CSS, and other files that need to be processed and bundled by Vite.
-  
-- index.html: where one can add the favicon, and webapp/website title, it contains the entry point of the vite project e.g. index.jsx
-  
-- tailwind.config.js: if using tailwind css, one can define screen size values here using theme as a property
-  
-- src/components: .jsx files that need to be imported to pages. Components hold the exact content and styles for the webapp/website e.g text, text cells, etc.
-  
-- src/pages: components are imported here. pages are .jsx files too
-  
-- src/style: contains custom css stylesheet e.g global.css, which is imported in index.jsx
-  
-- src/App.jsx: imports pages, contains path names definitions in routes,  and the 'scroll to the top' component
-  
-- src/index.css: holds tailwind's base, components and utilities 
-  
-- src/index.jsx: imports index.css, global.css (custom stylesheet), App.jsx, BrowserRouter, ReactDom, called in the root defined in index.html i.e index.jsx, <App> is enclosed in BrowserRouter
-  
-- src/main.jsx: (not needed)
+A reference guide for the file structure used in building my new **portfolio website** using **Vite**, **React**, and **Tailwind CSS**.
+
+---
+
+## 📁 Folder & File Overview
+
+### `public/`
+
+* Stores **static assets** like images and favicons.
+* Files here are **not processed** by Vite.
+* Assets can be accessed directly without importing:
+
+  ```jsx
+  <img src="/ats_website/raleigh.jpg" alt="Me" className="object-cover w-full h-full" />
+  ```
+
+---
+
+### `src/`
+
+The core of the application. Contains all files that Vite processes and bundles.
+
+#### `components/`
+
+* Holds all **reusable UI components** (`.jsx`).
+* Components define styles, layout blocks, text content, etc.
+
+#### `pages/`
+
+* Contains top-level `.jsx` files that make up the **main pages** of the site.
+* Imports and assembles components.
+
+#### `style/`
+
+* Stores custom CSS stylesheets, e.g. `global.css`.
+* Imported in `index.jsx`.
+
+#### `App.jsx`
+
+* Defines **app routes** and imports pages.
+* Includes logic like **scroll-to-top** behavior.
+
+#### `index.jsx`
+
+* Entry point of the app.
+* Imports `App.jsx`, `index.css`, `global.css`, and wraps `<App />` in `<BrowserRouter>`.
+* Called from the root `div` in `index.html`.
+
+#### `index.css`
+
+* Tailwind’s default CSS base, components, and utilities.
+
+#### `main.jsx`
+
+* **Not used** in this project (leftover from some Vite templates).
+
+---
+
+### `index.html`
+
+* Sets up the root structure of the app.
+* Add your **favicon** and website **title** here.
+* Calls `index.jsx`.
+
+---
+
+### `tailwind.config.js`
+
+* Customize Tailwind settings such as screen sizes:
+
+  ```js
+  theme: {
+    extend: {
+      screens: {
+        'xs': '360px',
+        // more breakpoints...
+      }
+    }
+  }
+  ```
